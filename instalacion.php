@@ -33,14 +33,19 @@ $db = new PDO('sqlite:favoritos.db');
 
 //1.5.2 Generamos la consulta
 
-$peticion = "INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) VALUES('jocarsa','jocarsa','Google','http://www.google.co.ve','tecnologia','buscador',10);".
-"INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) VALUES('jocarsa','jocarsa','JOCARSA','http://www.JOCARSA.COM','tecnologia','MI_PAGINA',10);".
+$peticion = "INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) 
+VALUES('jocarsa','jocarsa','Google','http://www.google.co.ve','tecnologia','buscador',10);".
+
+"INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) 
+VALUES('jocarsa','jocarsa','JOCARSA','http://www.JOCARSA.COM','tecnologia','MI_PAGINA',10);".
 
 //1.5.3 Insertar Contenido en la tabla
 
+$db->exec($peticion);
+
 //1.5.4 Cerrar Conexion
 
-
+$db = NULL;
 
 //2. crear tabla usuarios mysql
 

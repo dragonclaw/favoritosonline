@@ -11,7 +11,7 @@
 			"file": "instalacion.php",
 			"settings":
 			{
-				"buffer_size": 21,
+				"buffer_size": 1296,
 				"line_ending": "Unix"
 			}
 		}
@@ -52,10 +52,10 @@
 	"file_history":
 	[
 		"/var/www/favoritosonline/instalacion.php",
+		"/var/www/favoritosonline/index.php",
 		"/var/www/favoritosonline/untitled.html",
 		"/home/jromero/.config/sublime-text-3/Packages/User/chrome.sublime-build",
 		"/var/www/favoritosonline/favoritosonline.sublime-project",
-		"/var/www/favoritosonline/index.php",
 		"/var/www/favoritosonline/index.sublime-project",
 		"/var/www/php/untitled.php"
 	],
@@ -101,15 +101,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21,
+						"buffer_size": 1296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								855,
+								855
 							]
 						],
 						"settings":
@@ -117,7 +117,7 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
