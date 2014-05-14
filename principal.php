@@ -9,7 +9,9 @@ $db = new PDO('sqlite:favoritos.db');
 
 //ESTABLEZCO LA CONSULTA
 
-$peticion = "SELECT * FROM favoritos WHERE nombre = 'jocarsa'";
+$peticion = "SELECT * FROM favoritos";
+//$peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa'";
+
 //EJECUTO LA CONSULTA
 
 $resultado = $db->query($peticion);
@@ -19,9 +21,8 @@ $resultado = $db->query($peticion);
 //esto crea los titulos de la tabla
 
 
-
 echo "<table border=1>";
-echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td></tr>";
+echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td>USUARIO</td></tr>";
 
 
 foreach($resultado as $fila)
@@ -32,6 +33,8 @@ echo "<td>".$fila['direccion']."</td>";
 echo "<td>".$fila['categoria']."</td>";
 echo "<td>".$fila['comentario']."</td>";
 echo "<td>".$fila['valoracion']."</td>";
+echo "<td>".$fila['usuario']."</td>";
+echo "</tr>";
 
 }
 echo "</table>";

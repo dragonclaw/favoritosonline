@@ -11,7 +11,7 @@ $consulta = "CREATE TABLE favoritos(
 usuario TEXT NOT NULL,
 contrasena TEXT NOT NULL,
 titulo TEXT,
-dieccion TEXT,
+direccion TEXT,
 categoria TEXT,
 comentario TEXT,
 valoracion INTEGER
@@ -33,9 +33,10 @@ $db = new PDO('sqlite:favoritos.db');
 
 //1.5.2 Generamos la consulta
 
-$peticion = "INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) VALUES( 'jocarsa', 'jocarsa2, 'Google', 'http://www.google.co.ve', 'tecnologia', 'buscador', 10);".
-
-"INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) VALUES('jocarsa','jocarsa','JOCARSA','http://www.JOCARSA.COM','tecnologia','MI_PAGINA',10);";
+$peticion = "INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) 
+VALUES('jocarsa','jocarsa','buscador','www.google.co.ve','buscadores','prueba de insecion',5);".
+"INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) 
+VALUES('j','j','buscador nuevo','yahoo','buscadores','prueba de insercion 2',10);";
 
 //1.5.3 Insertar Contenido en la tabla
 
@@ -45,43 +46,6 @@ $db->exec($peticion);
 //1.5.4 Cerrar Conexion
 
 $db = NULL;
-
-
-//test
-
-//CREAR CONEXION
-$db = new PDO('sqlite:favoritos.db');
-
-//ESTABLEZCO LA CONSULTA
-
-$peticion = "SELECT * FROM favoritos;";
-
-//EJECUTO LA CONSULTA
-
-$resultado = $db->query($peticion);
-
-//IMPRIMO LA CONSULTA
-
-//esto crea los titulos de la tabla
-echo "<table border=1>";
-echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td></tr>";
-
-
-foreach($resultado as $fila)
-{
-	
-echo "<tr><td>".$fila['titulo']."</td>";
-echo "<td>".$fila['direccion']."</td>";
-echo "<td>".$fila['categoria']."</td>";
-echo "<td>".$fila['comentario']."</td>";
-echo "<td>".$fila['valoracion']."</td>";
-
-}
-echo "</table>";
-
-//SE CIERRA LA CONSULTA
-
-$db = null;
 
 
 //2. crear tabla usuarios mysql
@@ -127,7 +91,6 @@ $db->exec($peticion);
 //2.5.4 Cerrar Conexion
 
 $db = NULL;
-
 
 //3. crear tabla logs mysql
 
