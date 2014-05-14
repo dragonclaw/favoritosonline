@@ -9,8 +9,8 @@ $db = new PDO('sqlite:favoritos.db');
 
 //ESTABLEZCO LA CONSULTA
 
-$peticion = "SELECT * FROM favoritos";
-//$peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa'";
+//$peticion = "SELECT * FROM favoritos";
+$peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa'";
 
 //EJECUTO LA CONSULTA
 

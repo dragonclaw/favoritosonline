@@ -7,14 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "instalacion.php",
-			"settings":
-			{
-				"buffer_size": 1296,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/User/chrome.sublime-build",
 	"command_palette":
@@ -52,6 +44,11 @@
 	"file_history":
 	[
 		"/var/www/favoritosonline/instalacion.php",
+		"/var/www/favoritosonline/principal.php",
+		"/var/www/favoritosonline/sqlite/crearbiblioteca.php",
+		"/var/www/favoritosonline/sqlite/update.php",
+		"/var/www/favoritosonline/sqlite/verbiblioteca.php",
+		"/var/www/favoritosonline/sqlite/insertar.php",
 		"/var/www/favoritosonline/index.php",
 		"/var/www/favoritosonline/untitled.html",
 		"/home/jromero/.config/sublime-text-3/Packages/User/chrome.sublime-build",
@@ -61,7 +58,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -75,6 +72,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"titulos"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -92,43 +90,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "instalacion.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1296,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								855,
-								855
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -168,7 +137,7 @@
 	"project": "favoritosonline.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
