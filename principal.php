@@ -10,7 +10,7 @@ $db = new PDO('sqlite:favoritos.db');
 //ESTABLEZCO LA CONSULTA
 
 //$peticion = "SELECT * FROM favoritos";
-$peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa'";
+$peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa' and contrasena = 'jocarsa';";
 
 //EJECUTO LA CONSULTA
 
@@ -35,6 +35,24 @@ echo "<td>".$fila['comentario']."</td>";
 echo "<td>".$fila['valoracion']."</td>";
 echo "<td>".$fila['usuario']."</td>";
 echo "</tr>";
+
+//añadir un registro (dentro de la tabla)
+echo "
+<tr>
+<form action='crearfavorito.php' method='POST'>
+	<td><input type='text' name='titulo'></td>
+	<td><input type='text' name='direccion'></td>
+	<td><select name='categoria'>
+	<option value='salud'>SALUD</option>
+	<option value='trabajo'>TRABAJO</option>
+	<option value='hobby'>Hobby</option>
+	<option value='personal'>PERSONAL</option>
+	<option value='otros'>OTROS</option>
+	</td>
+	<td><input type='text' name='comentario'></td>
+	<td><input type='text' name='valoracion'></td>
+</tr>
+";
 
 }
 echo "</table>";
