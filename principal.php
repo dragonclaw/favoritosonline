@@ -22,7 +22,8 @@ $resultado = $db->query($peticion);
 
 
 echo "<table border=1>";
-echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td>USUARIO</td></tr>";
+echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td>USUARIO</td></td>;
+</tr>";
 
 
 foreach($resultado as $fila)
@@ -34,8 +35,11 @@ echo "<td>".$fila['categoria']."</td>";
 echo "<td>".$fila['comentario']."</td>";
 echo "<td>".$fila['valoracion']."</td>";
 echo "<td>".$fila['usuario']."</td>";
+echo "<td></td>";
 echo "</tr>";
 
+
+}
 //añadir un registro (dentro de la tabla)
 echo "
 <tr>
@@ -51,10 +55,9 @@ echo "
 	</td>
 	<td><input type='text' name='comentario'></td>
 	<td><input type='text' name='valoracion'></td>
+	<td><input type='submit'></td>
 </tr>
 ";
-
-}
 echo "</table>";
 
 //SE CIERRA LA CONSULTA

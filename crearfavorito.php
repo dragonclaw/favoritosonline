@@ -1,10 +1,34 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+<?php
+session_start();
 
-<body>
-</body>
-</html>
+//crear variables
+
+$usuario=$_SESSION['usuario'];
+$contrasena=$_SESSION['contrasena'];
+
+$addtitulo = $_POST['titulo'];
+$adddireccion = $_POST['direccion'];
+$addcategoria = $_POST['categoria'];
+$addcomentario = $_POST['comentario'];
+$addvaloracion = $_POST['valoracion'];
+
+//conexion
+
+//CREAR CONEXION
+$db = new PDO('sqlite:favoritos.db');
+
+//ESTABLEZCO LA CONSULTA
+
+//$peticion = "SELECT * FROM favoritos";
+$peticion = "INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) 
+VALUES('$usuario','$contrasena','$addtitulo','$adddireccion','$addcategoria','$addcomentario',5);";
+
+//EJECUTO LA CONSULTA
+
+$resultado = $db->query($peticion);
+
+$db = NULL;
+//IMPRIMO LA CONSULTA
+
+
+?>
