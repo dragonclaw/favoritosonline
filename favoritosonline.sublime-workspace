@@ -3,10 +3,38 @@
 	{
 		"selected_items":
 		[
+			[
+				"p",
+				"php	<?php … ?>"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "principal.php",
+			"settings":
+			{
+				"buffer_size": 2014,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "actualizarfavorito.php",
+			"settings":
+			{
+				"buffer_size": 1073,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "eliminarfavorito.php",
+			"settings":
+			{
+				"buffer_size": 848,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/User/chrome.sublime-build",
 	"command_palette":
@@ -43,10 +71,10 @@
 	},
 	"file_history":
 	[
+		"/var/www/favoritosonline/sqlite/update.php",
 		"/var/www/favoritosonline/instalacion.php",
 		"/var/www/favoritosonline/principal.php",
 		"/var/www/favoritosonline/sqlite/crearbiblioteca.php",
-		"/var/www/favoritosonline/sqlite/update.php",
 		"/var/www/favoritosonline/sqlite/verbiblioteca.php",
 		"/var/www/favoritosonline/sqlite/insertar.php",
 		"/var/www/favoritosonline/index.php",
@@ -58,7 +86,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -90,8 +118,94 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "principal.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								848,
+								848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "actualizarfavorito.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1073,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								788,
+								788
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "eliminarfavorito.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								546,
+								546
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
