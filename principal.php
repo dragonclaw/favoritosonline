@@ -22,7 +22,7 @@ $resultado = $db->query($peticion);
 
 
 echo "<table border=1>";
-echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td>USUARIO</td></td>;
+echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td></td>;
 </tr>";
 
 
@@ -34,8 +34,8 @@ echo "<td>".$fila['direccion']."</td>";
 echo "<td>".$fila['categoria']."</td>";
 echo "<td>".$fila['comentario']."</td>";
 echo "<td>".$fila['valoracion']."</td>";
-echo "<td>".$fila['usuario']."</td>";
-echo "<td></td>";
+//echo "<td>".$fila['usuario']."</td>";
+echo "<td><a href='eliminarfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>ELIMINAR FAVORITO</a></td>";
 echo "</tr>";
 
 

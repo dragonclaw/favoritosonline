@@ -21,7 +21,7 @@ $db = new PDO('sqlite:favoritos.db');
 
 //$peticion = "SELECT * FROM favoritos";
 $peticion = "INSERT INTO favoritos(usuario, contrasena, titulo, direccion, categoria, comentario, valoracion) 
-VALUES('$usuario','$contrasena','$addtitulo','$adddireccion','$addcategoria','$addcomentario',5);";
+VALUES('$usuario','$contrasena','$addtitulo','$adddireccion','$addcategoria','$addcomentario','$addvaloracion');";
 
 //EJECUTO LA CONSULTA
 
@@ -30,5 +30,13 @@ $resultado = $db->query($peticion);
 $db = NULL;
 //IMPRIMO LA CONSULTA
 
+//este codigo redirecciona nuevamente a principal.php
 
+echo "
+<html>
+	<head>
+	<meta http-equiv='refresh' content='0;url=principal.php'
+	</head>
+</html>
+";
 ?>
