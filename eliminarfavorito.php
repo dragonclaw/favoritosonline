@@ -13,8 +13,9 @@ $categoria=$_GET['categoria'];
 $comentario=$_GET['comentario'];
 $valoracion=$_GET['valoracion'];
 
-$consulta = "DELETE FROM favoritos WHERE usuario='".$usuario."'AND contrasena'".$contrasena."'AND titulo='".$titulo."'AND direccion='".$direccion."AND categoria='".$categoria."'AND comentario='".$comentario."'AND valoracion='".$valoracion."'";
+$consulta = "DELETE FROM favoritos WHERE usuario='".$usuario."' AND contrasena='".$contrasena."' AND titulo='".$titulo."' AND direccion='".$direccion."' AND categoria='".$categoria."' AND comentario='".$comentario."' AND valoracion='".$valoracion."'";
 
+//echo $consulta; //CON ESTO VEMOS LA CONSULTA SQLITE A VER SI ESTA BIEN O NO.
 $resultado= $db->exec($consulta);
 }
 catch(PDOException $e)
@@ -25,6 +26,14 @@ echo "Exception : ".$e->getMessage();
 
 }
 $db = NULL;
+echo "
+<html>
+	<head>
+	<meta http-equiv='refresh' content='0;url=principal.php'>
+	</head>
 
+</html>
+
+";
 
 ?>

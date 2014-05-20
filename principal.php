@@ -12,6 +12,7 @@ $db = new PDO('sqlite:favoritos.db');
 //$peticion = "SELECT * FROM favoritos";
 $peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa' and contrasena = 'jocarsa';";
 
+
 //EJECUTO LA CONSULTA
 
 $resultado = $db->query($peticion);
@@ -22,7 +23,7 @@ $resultado = $db->query($peticion);
 
 
 echo "<table border=1>";
-echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td></td>;
+echo "<tr><td>TITULO</td><td>DIRECCION</td><td>CATEGORIA</td><td>COMENTARIO</td><td>VALORACION</td><td></td><td></td>;
 </tr>";
 
 
@@ -36,6 +37,7 @@ echo "<td>".$fila['comentario']."</td>";
 echo "<td>".$fila['valoracion']."</td>";
 //echo "<td>".$fila['usuario']."</td>";
 echo "<td><a href='eliminarfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>ELIMINAR FAVORITO</a></td>";
+echo "<td><a href='actualizarfavorito.php?titulo=".$fila['titulo']."&direccion=".$fila['direccion']."&categoria=".$fila['categoria']."&comentario=".$fila['comentario']."&valoracion=".$fila['valoracion']."'>ACTUALIZAR FAVORITO</a></td>";
 echo "</tr>";
 
 
@@ -56,6 +58,7 @@ echo "
 	<td><input type='text' name='comentario'></td>
 	<td><input type='text' name='valoracion'></td>
 	<td><input type='submit'></td>
+	<td></td>
 </tr>
 ";
 echo "</table>";
