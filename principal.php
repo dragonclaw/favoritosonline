@@ -10,8 +10,7 @@ $db = new PDO('sqlite:favoritos.db');
 //ESTABLEZCO LA CONSULTA
 
 //$peticion = "SELECT * FROM favoritos";
-$peticion = "SELECT * FROM favoritos WHERE usuario = 'jocarsa' and contrasena = 'jocarsa';";
-
+$peticion = "SELECT * FROM favoritos WHERE usuario = '".$_SESSION['usuario']."' and contrasena = '".$_SESSION['contrasena']."';";
 
 //EJECUTO LA CONSULTA
 
@@ -19,7 +18,7 @@ $resultado = $db->query($peticion);
 
 //IMPRIMO LA CONSULTA
 
-//esto crea los titulos de la tabla
+//esto crea los titulos de la tablhttp://instagram.com/p/qSSf5KhXpQ/?modal=truea
 
 
 echo "<table border=1>";
@@ -58,10 +57,17 @@ echo "
 	<td><input type='text' name='comentario'></td>
 	<td><input type='text' name='valoracion'></td>
 	<td><input type='submit'></td>
-	<td></td>
-</tr>
-";
-echo "</table>";
+	";
+	if ($_SESSION['permisos'] == 1)
+	{
+echo "<td><a href='gestion_usuarios.php'>GESTIONAR_USUARIOS</td>";
+}
+else
+{
+echo "<td></td>";
+}
+echo" </tr>
+</table>";
 
 //SE CIERRA LA CONSULTA
 

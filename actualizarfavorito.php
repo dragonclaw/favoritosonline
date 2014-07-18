@@ -53,4 +53,8 @@ echo "</tr>";
 }
 echo "</table>";
 
+$_SESSION['titulo'] = $titulo;
+
+$db = null;
+
 ?>
